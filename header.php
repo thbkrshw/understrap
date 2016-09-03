@@ -56,7 +56,7 @@
                                     array(
                                         'theme_location' => 'primary',
                                         'container_class' => 'collapse navbar-toggleable-xs exCollapsingNavbar',
-                                        'menu_class' => 'nav navbar-nav',
+                                        'menu_class' => 'nav navbar-nav pull-xs-right',
                                         'fallback_cb' => '',
                                         'menu_id' => 'main-menu',
                                         'walker' => new wp_bootstrap_navwalker()
