@@ -5,6 +5,12 @@
  * @package understrap
  */
 
+
+// Add page excerpt support
+add_action( 'init', 'my_add_excerpts_to_pages' );
+function my_add_excerpts_to_pages() {
+    add_post_type_support( 'page', 'excerpt' );
+}
 /**
  * Theme setup and custom theme supports.
  */
@@ -66,4 +72,4 @@ require get_template_directory() . '/inc/bootstrap-wp-gallery.php';
 /**
 * Load WooCommerce functions.
 */
-require get_template_directory() . '/inc/woocommerce.php';
+//require get_template_directory() . '/inc/woocommerce.php';
