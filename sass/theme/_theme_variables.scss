@@ -5,13 +5,16 @@
 // Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
 // Just add your color code here, compile the theme.scss file to change this color everywhere
 
-$bleu: #00a1e2;
-$fuschia: #e8173e;
-$vert: #0cf0b5;
+$blue: #00a1e2;
+$red: #e8173e;
+// $green: #0cf0b5;
+$green: #65ba9d;
+
+$darkgrey: #777c82;
 
 $background: #eae4e4;
 
-$brand-primary: $bleu;
+$brand-primary: $blue;
 
 // Basics of a navbar
 $navbar-height:                    60px;

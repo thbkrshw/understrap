@@ -8,27 +8,44 @@
  */
 ?>
 
+
+
+
 <?php get_sidebar('footerfull'); ?>
 
 <div class="wrapper" id="wrapper-footer">
     
-    <div class="container">
+    <div class="container footer">
 
-        <div class="row">
 
-            <div class="col-md-12">
+            <div class="col-md-12 footer-container">
     
-                <footer id="colophon" class="site-footer" role="contentinfo">
 
-                    <div class="site-info">
+    <!-- The WordPress Menu goes here -->
+<?php wp_nav_menu(
+    array(
+        'theme_location' => 'footer',
+        'container_class' => 'collapse navbar-toggleable-xs exCollapsingNavbar',
+        'menu_class' => 'nav navbar-nav pull-xs-left',
+        'fallback_cb' => '',
+        'menu_id' => 'footer-menu',
+        'walker' => new wp_bootstrap_navwalker()
+    )
+); ?>
 
-                    </div><!-- .site-info -->
+    <ul class="nav navbar-nav footer-list">
 
-                </footer><!-- #colophon -->
+    <?php
 
-            </div><!--col end -->
+    // foreach (["SARL Dutheil &amp; fils", "&copy; ".date('Y'), "Mentions légales"] as $v) {
+    //     echo "<li class='nav-item'>$v</li>";
+    // }
+    ?>
 
-        </div><!-- row end -->
+    </ul>
+
+
+</div>
         
     </div><!-- container end -->
     

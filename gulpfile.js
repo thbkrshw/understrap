@@ -92,7 +92,7 @@ gulp.task('sass', function () {
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task('watch', function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
-    gulp.watch('./css/theme.css', ['cssnano']);
+    // gulp.watch('./css/theme.css', ['cssnano']);
 });
 
 // Run: 

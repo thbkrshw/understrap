@@ -16,12 +16,15 @@ get_header(); ?>
     
     <div  id="content" class="container">
 
-        <div class="row">
+        <!--<div class="row"> -->
         
+            <?php get_sidebar(); ?>
+
     	   <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
            
                  <main id="main" class="site-main" role="main">
 
+    <div class="page-bar"></div>
                     <?php while ( have_posts() ) : the_post(); ?>
 
                         <?php get_template_part( 'loop-templates/content', 'page' ); ?>
@@ -39,9 +42,8 @@ get_header(); ?>
                
     	    </div><!-- #primary -->
             
-            <?php get_sidebar(); ?>
 
-        </div><!-- .row -->
+        <!-- </div><!-- .row -->
         
     </div><!-- Container end -->
     

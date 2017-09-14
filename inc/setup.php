@@ -41,11 +41,13 @@ function understrap_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'understrap' ),
+		'top' => __('Top Menu', 'understrap'),
+		'footer' => __('Footer Menu', 'understrap')
 	) );
 
 	/*
@@ -86,15 +88,15 @@ add_action( 'after_setup_theme', 'understrap_setup' );
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );*/
 /* Removes the ... from the excerpt read more link */
-function custom_excerpt_more( $more ) {
-	return '';
-}
-add_filter( 'excerpt_more', 'custom_excerpt_more' );
+// function custom_excerpt_more( $more ) {
+// 	return '';
+// }
+// add_filter( 'excerpt_more', 'custom_excerpt_more' );
 
 /* Adds a custom read more link to all excerpts, manually or automatically generated */
 
-function all_excerpts_get_more_link($post_excerpt) {
+// function all_excerpts_get_more_link($post_excerpt) {
 
-    return $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More...', 'understrap')  . '</a></p>';
-}
-add_filter('wp_trim_excerpt', 'all_excerpts_get_more_link');
+//     return $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More...', 'understrap')  . '</a></p>';
+// }
+// add_filter('wp_trim_excerpt', 'all_excerpts_get_more_link');

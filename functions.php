@@ -5,12 +5,22 @@
  * @package understrap
  */
 
-
 // Add page excerpt support
 add_action( 'init', 'my_add_excerpts_to_pages' );
 function my_add_excerpts_to_pages() {
     add_post_type_support( 'page', 'excerpt' );
 }
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+function custom_excerpt_more( $excerpt ) {
+    return $excerpt;
+}
+add_filter( 'wp_trim_excerpt', 'custom_excerpt_more' );
+function custom_excerpt_length( $length ) {
+	return 1024;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+
 /**
  * Theme setup and custom theme supports.
  */
