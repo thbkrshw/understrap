@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/* $red: #e8173e; */
+/* $green: #0cf0b5; */
+/* $green: #0cefb5; */
 /*!
  * Bootstrap v4.0.0-alpha.3 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -7198,6 +7201,34 @@ html, body {
   height: 100%;
   background-color: #eae4e4; }
 
+.mx-0 {
+  margin-right: 0 !important;
+  margin-left: 0 !important; }
+
+.my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
+.mr-0 {
+  margin-right: 0 !important; }
+
+.ml-0 {
+  margin-left: 0 !important; }
+
+.px-0 {
+  padding-right: 0 !important;
+  padding-left: 0 !important; }
+
+.py-0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important; }
+
+.pr-0 {
+  padding-right: 0 !important; }
+
+.pl-0 {
+  padding-left: 0 !important; }
+
 #page {
   height: 100%; }
 
@@ -7211,7 +7242,11 @@ html, body {
   width: 300px; }
 
 #menu-mainmenu {
-  margin-right: 5em; }
+  margin-right: 8em;
+  padding-left: 16px; }
+
+.site-main {
+  padding-right: 15px; }
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -7231,20 +7266,24 @@ html, body {
   /* Needed for first-letter selector  */
   color: white;
   text-transform: uppercase;
-  font-weight: bold; }
+  font-size: 1.2em; }
 
 .card-title > a::first-letter {
-  font-size: 1.4em; }
+  font-size: 1.4em;
+  font-weight: bold; }
 
 .card .subtitle {
-  text-transform: uppercase; }
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  line-height: 0.75em; }
 
 .card-blue {
   background-color: #00a1e2;
   color: white; }
 
 .card-red {
-  background-color: #e8173e;
+  background-color: #e7173e;
   color: white; }
 
 .card-green {
@@ -7278,10 +7317,31 @@ html, body {
   text-decoration: underline; }
 
 #footer-menu li {
+  margin: 3px 0;
+  color: #eae4e4;
   border-right: 1px solid #eae4e4; }
 
 #footer-menu li:last-child {
-  border: none; }
+  border-right: none; }
+
+.footer-style {
+  position: absolute;
+  top: 0;
+  right: 5px; }
+
+ul.points {
+  list-style: none;
+  display: flex;
+  align-items: stretch; }
+
+.points li {
+  float: left;
+  height: 100%;
+  display: inline-block; }
+
+.point-1 {
+  width: 25px;
+  background-color: #eae4e4; }
 
 .footer-list .nav-item {
   color: white;
@@ -7296,8 +7356,16 @@ html, body {
   padding: 0.2em;
   background-color: #777c82; }
 
+#footer-menu.navbar-nav li a.nav-link {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important; }
+
 .entry-title {
   color: #00a1e2;
+  text-transform: uppercase; }
+
+.secondary-page h2 {
+  color: #777c82;
   text-transform: uppercase; }
 
 .entry-title::first-letter {
@@ -7326,3 +7394,29 @@ html, body {
 
 .menu .current_page_item a {
   color: #00a1e2; }
+
+.wpcf7-form .wpcf7-response-output.wpcf7-validation-errors {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb !important;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-radius: .25rem; }
+
+.wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ok {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb !important;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-radius: .25rem; }

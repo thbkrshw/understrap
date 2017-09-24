@@ -13,7 +13,7 @@ get_header(); ?>
     
     <div  id="content" class="container">
         
-	   <div id="primary" class="col-md-12 content-area">
+	   <div id="primary" class="col-md-12 content-area px-0">
 
             <main id="main" class="site-main" role="main">
 

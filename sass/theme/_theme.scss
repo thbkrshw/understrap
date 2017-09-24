@@ -3,6 +3,42 @@ html,body {
   background-color: $background;
 }
 
+// Manual spacing utilities (see: https://getbootstrap.com/docs/4.0/utilities/spacing/)
+
+.mx-0 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+.my-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.mr-0 {
+    margin-right: 0 !important;
+}
+
+.ml-0 {
+    margin-left: 0 !important;
+}
+
+.px-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+.py-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.pr-0 {
+    padding-right: 0 !important;
+}
+
+.pl-0 {
+    padding-left: 0 !important;
+}
+
 #page {
     height: 100%;
 }
@@ -20,7 +56,14 @@ html,body {
 }
 
 #menu-mainmenu {
-    margin-right: 5em;
+    margin-right: 8em;
+    padding-left: 16px;
+}
+
+
+// Main page
+.site-main {
+    padding-right: 15px;
 }
 
 // Home page cards
@@ -45,15 +88,21 @@ html,body {
     display: inline-block; /* Needed for first-letter selector  */
     color: white;
     text-transform: uppercase;    
-    font-weight: bold;
+    // font-weight: bold;
+    font-size: 1.2em;
 }
 
 .card-title > a::first-letter {
     font-size: 1.4em;
+    font-weight: bold;
+    // text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card .subtitle {
+    display: block;
     text-transform: uppercase;    
+    font-size: 0.85em;
+    line-height: 0.75em;
 }
 
 .card-blue {
@@ -107,12 +156,38 @@ html,body {
 }
 
 #footer-menu li {
+    margin: 3px 0;
+    color: $background;
     border-right: 1px solid $background;
 }
-
 #footer-menu li:last-child {
-    border: none;
+    border-right: none;
 }
+
+
+.footer-style {
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+
+ul.points {
+    list-style: none;
+    display: flex;
+    align-items: stretch;
+}
+
+.points li {
+    float: left;
+    height: 100%;
+    display: inline-block;
+}
+
+.point-1 {
+    width: 25px;
+    background-color: $background;
+}
+
 
 // footer
 .footer-list .nav-item {
@@ -132,13 +207,25 @@ html,body {
 }
 
 
+
+#footer-menu.navbar-nav li a.nav-link {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
 // Page
+
 
 .entry-title {
     color: $brand-primary;
     text-transform: uppercase;
-                                
 }
+
+.secondary-page h2 {
+    color: $darkgrey;
+    text-transform: uppercase;
+}
+
 
 .entry-title::first-letter {
     font-weight: bold;
@@ -179,4 +266,35 @@ html,body {
 }
 
 
+// Contact form
+.wpcf7-form .wpcf7-response-output.wpcf7-validation-errors {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb !important;
 
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: .25rem;
+}
+
+
+
+.wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ok {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb !important;
+
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: .25rem;
+}
