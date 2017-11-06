@@ -34,32 +34,27 @@
 
                 <div class="col-md-12">
 
-
                             <div class="navbar-header">
+                                <div class="col-sm-6">
 
-                                <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-
-                                  <button class="navbar-toggle hidden-sm-up" type="button" data-toggle="collapse" data-target=".exCollapsingNavbar">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-
+                                    <!-- Your site title as branding in the menu -->
+                                    <a class="navbar-brand"
+                                        href="<?php echo esc_url( home_url( '/' ) ); ?>"
+                                        title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+                                        rel="home">
+                                        <img alt="<?php bloginfo( 'name' ); ?>"
+                                            src="<?php bloginfo('template_directory'); ?>/img/logo.png" />
+                                    </a>
+                                </div>
+                            </div>
 
                             <div class="col-sm-6">
-                                <!-- Your site title as branding in the menu -->
-    <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img alt="<?php bloginfo( 'name' ); ?>" src="<?php bloginfo('template_directory'); ?>/img/logo.png" /></a>
-                            </div>
-                            </div>
-
-    <div class="col-sm-6">
 
                             <!-- The WordPress Menu goes here -->
                             <?php wp_nav_menu(
                                     array(
                                         'theme_location' => 'top',
-                                        'container_class' => 'collapse navbar-toggleable-xs exCollapsingNavbar',
+                                        'container_class' => 'collapse navbar-toggleable-md exCollapsingNavbar',
                                         'menu_class' => 'nav navbar-nav pull-xs-right',
                                         'fallback_cb' => '',
                                         'menu_id' => 'top-menu',

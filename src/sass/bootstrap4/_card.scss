@@ -200,7 +200,7 @@
 // Those changes are noted by `// Margin balancing`.
 
 @if $enable-flex {
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(lg) {
     .card-deck {
       display: flex;
       flex-flow: row wrap;
@@ -217,7 +217,7 @@
     }
   }
 } @else {
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(lg) {
     $space-between-cards: (2 * $card-deck-margin);
     .card-deck {
       display: table;

@@ -62,8 +62,25 @@ body {
 }
 
 #menu-mainmenu {
-    margin-right: 8em;
-    padding-left: 16px;
+    padding-top: 2em;
+    padding-left: 0;
+}
+
+@include media-breakpoint-up(lg) { 
+    #menu-mainmenu {
+        margin-right: 8em;
+        padding-left: 16px;
+    }
+}
+
+.card-max-img {
+    display: none;
+}
+
+@include media-breakpoint-up(lg) { 
+    .card-max-img {
+        display: block;
+    }
 }
 
 
@@ -91,6 +108,7 @@ body {
 }
 
 .card-title > a {
+    // border-bottom: 1px solid transparent;
     display: inline-block; /* Needed for first-letter selector  */
     color: white;
     text-transform: uppercase;    
@@ -156,6 +174,33 @@ body {
     text-decoration: underline;
     /* color: $brand-primary; */
 }
+
+
+.smallBottomMenu  {
+    ul {
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .menu-item {
+        float: none;
+        display: block;
+    }
+
+    li {
+        background-color: $darkgrey;
+        padding: 0.2em 0.5em;
+        margin: 0.5em 0;
+    }
+
+    a {
+        color: $background;
+        display: inline-block;
+    }
+
+}
+
+    
 
 #footer-menu .menu-item > a {
     color: $background;

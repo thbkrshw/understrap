@@ -47,6 +47,7 @@ function understrap_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'understrap' ),
 		'top' => __('Top Menu', 'understrap'),
+		'small-footer' => __('Small Device Footer', 'understrap'),
 		'footer' => __('Footer Menu', 'understrap')
 	) );
 

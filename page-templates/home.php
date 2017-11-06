@@ -22,7 +22,7 @@ $items = wp_get_nav_menu_items("MainMenu", array('sort_column' => 'menu_order', 
                     <?php foreach ($items as $i): ?>
                             <div class='card <?php echo $colors[$colorIndex++ % $colorsSize] ?>'>
                                 <?php if(has_post_thumbnail($i->object_id)): ?>
-                                <div class="card-max-img hidden-xs-down">
+                                <div class="card-max-img visible-lg-up">
                                 <?php echo get_the_post_thumbnail($i->object_id); ?>
                                 </div>
                                 <?php endif; ?>

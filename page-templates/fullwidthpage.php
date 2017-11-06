@@ -19,7 +19,6 @@ get_header(); ?>
 
                 <?php while ( have_posts() ) : the_post(); ?>
 
-    <p>test</p>
                     <?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
                     <?php
